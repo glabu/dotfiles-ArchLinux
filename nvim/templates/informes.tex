@@ -1,0 +1,74 @@
+\documentclass{scrartcl}
+
+\KOMAoptions{%
+  fontsize=12pt,      % Tamaño de fuente
+  %paper=a4,          % Tamaño del papel
+  DIV=12,
+  BCOR=0mm,
+  %titlepage=true,    % Reserva una página para el título.
+  twoside=false,        % Para imprimir a doble página
+  headings=normal,    % Tamaño de letra para los títulos: small, normal, big
+  parskip=half,       % Espacio entre párrafos: full (una línea) o half (media línea)
+  %headsepline=true,   % Una linea separa la cabecera del texto
+  %listof=totoc,      % Añadir a los contenidos la lista de tablas y figuras
+  %bibliography=toc,  % Añadir a los contenidos una entrada para la bibliografia
+  %draft              % Para versiones de revisión, muestra las líneas mal formateadas
+}
+
+\usepackage[spanish,es-tabla]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{amsmath,amssymb}
+\usepackage{siunitx}
+
+\usepackage{microtype}                 
+
+\usepackage[bottom=3cm]{geometry}
+
+\usepackage{graphicx}
+\graphicspath{{Figuras/}}
+
+\usepackage{booktabs}  
+
+\usepackage{lipsum}
+
+\RequirePackage[
+    automark,                              
+    autooneside=false                       
+]{scrlayer-scrpage}  
+\pagestyle{scrheadings}
+
+\usepackage{hyperref}
+\hypersetup{%
+  % Descomentar la siguiente línea para crear enlaces con colores. 
+  %colorlinks=true, linktocpage=true, pdfstartview=FitV,%
+  %urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, %pagecolor=RoyalBlue,%
+  % Descomentar la siguiente línea para crear enlaces en negro (útil para imprimir)
+  colorlinks=false, linktocpage=false, pdfborder={0 0 0}, pdfstartpage=3, pdfstartview=FitV,% 
+  pdftitle={Trabajo ...},%
+  pdfauthor={Ismael Torres García},%
+  %pdfkeywords={LaTeX, curso, ugr, koma-script},%
+  pdfcreator={pdfLaTeX},%
+  pdfproducer={LaTeX con hyperref}%
+}
+
+%======== Configuracion 
+\addtokomafont{disposition}{\usefont{T1}{qhv}{b}{n}\selectfont\color{black}}
+
+% \titlehead{}         
+\subject{Asignatura ...}
+\title{Plantilla de \texttt{scrartcl} del paquete KOMA-script}
+\author{Ismael Torres García}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+\lipsum[1-10]
+
+\subsection{Profundizando}
+\lipsum[1-10]
+
+
+\end{document}

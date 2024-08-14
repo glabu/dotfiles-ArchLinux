@@ -1,0 +1,51 @@
+% Plantilla de TikZ para empezar a hacer figuras
+% Autor: Ismael Torres García
+\documentclass[tikz,border=3pt]{standalone}
+\usetikzlibrary{calc, arrows.meta, decorations.pathmorphing, decorations.markings}
+\usepackage{fontenc}
+\usepackage[math-style=ISO,bold-style=ISO]{unicode-math}
+\setmainfont{Minion Pro}               %% Fuente Minion Pro de Adobe para el texto
+\setmathfont[                          %% Fuente MinionMath de Johannes Küsner para las matemáticas
+    Extension = .otf,
+    Path = ./MinionMath/,
+    Scale = 1,
+    Script = Math,
+    SizeFeatures = {
+        {Size = -6, Font = MinionMath-Tiny,
+        Style = MathScriptScript},
+        {Size = 6-8.4, Font = MinionMath-Capt,
+        Style = MathScript},
+        {Size = 8.4-, Font = MinionMath-Regular},
+    },
+]{MinionMath-Regular}
+\setmathfont[                         
+    Extension = .otf,
+    Path = ./MinionMath/,
+    version = bold,
+]{MinionMath-Bold}
+
+%% Define aquí los colores que quieras utilizar si necesitas
+\usepackage{xcolor}
+%\definecolor{laser}{RGB}{76,0,155}    % Color de la semilla
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% COMIENZO DEL DOCUMENTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\begin{tikzpicture}[ % Define aquí estilos con anterioridad que vayas a utilizar mucho en el texto
+  %arrow/.style={-{Stealth[length=2mm,width=1.5mm]},shorten >= 1pt},
+]
+
+%% DEFINICIONES
+%\def\anchura{90pt}
+%\coordinate (sublevel) at (0, 10pt);
+
+
+%% TEXTO
+%\node[left, align=center] at (110pt,190pt) {\footnotesize Emisión\\\footnotesize no radiativa};
+
+\end{tikzpicture}
+
+\end{document}
+	

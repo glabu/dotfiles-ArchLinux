@@ -1,0 +1,85 @@
+\documentclass[14pt]{beamer}
+\usetheme{Copenhagen}
+%\usecolortheme{beaver}
+
+%\setbeamertemplate{navigation symbols}{} %la barra de navegación la oculto
+%\setbeamercovered{transparent}{} %veo lo que viene en la sig. diapo
+%\setbeamertemplate{healine}{} %oculta la barra de nav. de arriba de las secciones
+
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath, amsfonts, amsthm}
+%\usepackage{pgfpages} %para imprimir las diapos si quieres
+%\pgfpagesuselayout{4 on 1}[a4paper, border, shrink=5mm]
+
+\title{Plantilla Beamer}
+\author{Ismael Torres García}
+\date{Agosto de 2022}
+
+\begin{document}
+
+\maketitle
+
+\begin{frame}{Índice}
+    \tableofcontents
+\end{frame}
+
+\section{Intro}
+
+\begin{frame}{Supercosa 1}
+
+\begin{itemize}
+    \item<1-> Cosa 1
+    \item<2-> Cosa 2
+    \item<3-> Cosa 3
+\end{itemize}
+
+\only<2>{Einstein} %con 'only' la palabra 'Dirac' de después no sabe que 'Einstein' está ahí
+\onslide<3>{Dirac}
+
+Puedo poner \alert<1>{alertas}. También puedo poner las cosas en \textbf<2>{negrita}.
+
+\end{frame}
+
+\section{Matemáticas}
+
+\begin{frame}{Cosas especiales}
+
+\begin{block}{Coso 1}
+    Un texto
+\end{block}
+
+\begin{exampleblock}{Ejemplo 1}
+     Un ejemplo
+\end{exampleblock}
+
+\begin{block}{Teorema (Pitágoras)}
+    $a^2+b^2=c^2$
+\end{block}
+
+\begin{proof}<2>
+    Te lo dejo a ti
+\end{proof}
+    
+\end{frame}
+
+\begin{frame}{Con dos columnas}
+    \begin{columns}
+        \column{0.5\textwidth} blibli bliblbiblbib. blibli bliblbiblbib. blibli bliblbiblbib.blibli bliblbiblbib.blibli bliblbiblbib 
+        \column{0.5\textwidth} blibli bliblbiblbib.blibli bliblbiblbibblibli bliblbiblbib.blibli bliblbiblbibblibli bliblbiblbib.blibli bliblbiblbib.
+    \end{columns}
+\end{frame}
+
+\section{Prueba}
+
+\begin{frame}{Otra cosa}
+    Más cosas
+\end{frame}
+
+\subsection{Otra prueba}
+
+\begin{frame}{Otra cosa más}
+    Y más cosas
+\end{frame}
+    
+\end{document}

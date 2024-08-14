@@ -1,0 +1,95 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\usepackage{xcolor}
+\usepackage{lmodern}
+
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+
+\usetheme{Madrid}
+\usecolortheme{rose}
+
+
+\setbeamercolor{title}{fg=black, bg=green!30!white}%
+%\setbeamercolor{author}{fg=black, bg=green!30!white}%
+\setbeamercolor{frametitle}{fg=magenta, bg = red!10!white}%
+\setbeamertemplate{navigation symbols}{}% Quita los símbolos de navegación
+
+
+\title{Ejemplo de presentación}
+\author{Fernando Chamizo}
+\institute[UAM]{Universidad Autónoma de Madrid}
+\date{10 de diciembre de 2021}
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% DIAPOSITIVA %
+%%%%%%%%%%%%%%%
+%crea la página del título
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+%%%%%%%%%%%%%%%
+% DIAPOSITIVA %
+%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Tabla de contenidos}
+\tableofcontents
+\end{frame}
+
+
+\section{Principio}
+\begin{frame}
+\frametitle{La diapositiva}
+Mi primera diapositiva
+\end{frame}
+
+\begin{frame}
+\frametitle{Bloques}
+Texto
+\uncover<2>{\begin{block}{Un bloque}
+Solo en la segunda pulsación
+\end{block}}
+\uncover<3->{\begin{block}{}
+Un bloque sin cabecera a partir de la tercera.
+\end{block}}
+
+\uncover<3-4>{
+{\setbeamercolor{block title}{bg=green, fg=red}
+\setbeamercolor{block body}{bg=cyan!10, fg=blue}
+\begin{block}{Hola}
+En la tercera y cuarta con otros colores.
+\end{block}}
+}
+
+\begin{itemize}
+ \item<5-> Desde la quinta
+ \item<6> Sexta
+\end{itemize}
+
+
+
+\end{frame}
+
+
+\section{Fin}
+\begin{frame}
+\begin{center}
+ \Huge Gracias por su atención
+\end{center}
+\end{frame}
+
+
+\end{document}

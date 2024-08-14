@@ -1,0 +1,165 @@
+\documentclass{beamer}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+
+\usepackage{xcolor}
+\usepackage{lmodern}
+
+
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Colores
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\definecolor{azul_oscuro}{rgb}{0,0.08,0.45}
+\definecolor{azul}{RGB}{64,80,147}
+\definecolor{azul_claro}{RGB}{0,119,200}
+\definecolor{verde_oscuro}{RGB}{74,119,41}
+\definecolor{fondo}{RGB}{208,212,229}
+\definecolor{white2}{RGB}{230,230,255}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{tikz}
+\usepackage{tcolorbox}
+%%--------------------------------------------
+\usetikzlibrary{calc,intersections}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\mode<presentation>{%
+    \useinnertheme{rounded}%
+    \setbeamercolor{title}{fg=white}%
+    \setbeamercolor{frametitle}{fg=red!40!black, bg = green!20!fondo}%
+    \setbeamercolor{section in head/foot}{fg=white,bg=azul_oscuro}%
+    \setbeamertemplate{navigation symbols}{}%
+    \usecolortheme[named=azul_oscuro]{structure}
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% El título está dividido en ``background'' y la ``title page'' propiamente dicha.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%*****************************************
+%% BACKGROUND
+%%*****************************************
+\setbeamertemplate{background}{%
+  \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (\paperwidth,\paperheight);
+    \fill[top color=white,bottom color=fondo,opacity=1] (0,0) rectangle (\paperwidth,\paperheight);
+    \coordinate (v1) at (3.4,0);
+    \coordinate (v2) at (0,\paperheight);
+    \coordinate (h1) at (0,1.95);
+    \coordinate (h2) at (\paperwidth,1.95);
+    \coordinate (p) at (intersection of h1--h2 and v1--v2);
+    \fill[verde_oscuro] (v2)--(p)--(h2)|-cycle;
+    \fill[white] (h1)--(p)--(v1)-|cycle;
+    \begin{scope}
+      \clip (h1)--(p)--(v1)-|cycle;
+      \node[inner sep=0pt,anchor=east] at ($(p)!.5!(v1)$) {\includegraphics[width=3cm]{logoUAM.png}};
+    \end{scope}
+    \draw[line width=.1cm,azul_claro] (h1)--(h2);
+    \draw[line width=.1cm,azul_claro] (v1)--(v2);
+    \ifnum\thepage>1\relax%
+    \fill[top color=white,bottom color=fondo,opacity=1] (0,0) rectangle (\the\paperwidth,\the\paperheight);
+    \fi
+  \end{tikzpicture}
+}
+%%*****************************************
+%% TITLE PAGE
+%%*****************************************
+\setbeamertemplate{title page}{%
+\begin{beamercolorbox}[leftskip=1.5cm]{title}
+    \begin{tikzpicture}
+    \useasboundingbox (0,0) rectangle (8,\paperheight-5pt);
+    %\draw[step=1cm,help lines,opacity=1] (0,0) grid (8,\paperheight-5pt);
+    \node[anchor=south west,text width=9cm,align=flush left,font={\LARGE\bfseries\color{white2}}] at (0,.5\paperheight+.2cm) {\inserttitle};
+    \draw[line width=2pt,color=white2] (.1,.5\paperheight)--(\paperwidth,.5\paperheight);
+    \node[anchor=north west,text width=9cm,align=flush left,font={\bfseries\color{white2}}] at (0,.5\paperheight-0.2cm) {\insertauthor};
+    \node[anchor=south west,text width=7.5cm,align=flush left,azul_oscuro] at (1.5,.8) {\insertinstitute};
+    \node[anchor=north west,text width=7.5cm,align=flush left,font={\footnotesize},azul_oscuro] at (1.5,.8) {\insertdate};
+    \end{tikzpicture}
+\end{beamercolorbox}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Ejemplo de presentación}
+\author{Fernando Chamizo}
+\institute[UAM]{Universidad Autónoma de Madrid}
+\date{10 de diciembre de 2021}
+
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%
+% DIAPOSITIVA %
+%%%%%%%%%%%%%%%
+%crea la página del título
+\begin{frame}
+\titlepage
+\end{frame}
+
+
+%%%%%%%%%%%%%%%
+% DIAPOSITIVA %
+%%%%%%%%%%%%%%%
+\begin{frame}
+\frametitle{Tabla de contenidos}
+\tableofcontents
+\end{frame}
+
+
+\section{Principio}
+\begin{frame}
+\frametitle{La diapositiva}
+Mi primera diapositiva
+\end{frame}
+
+\begin{frame}
+\frametitle{Bloques}
+Texto
+\uncover<2>{\begin{block}{Un bloque}
+Solo en la segunda pulsación
+\end{block}}
+\uncover<3->{\begin{block}{}
+Un bloque sin cabecera a partir de la tercera.
+\end{block}}
+
+\uncover<3-4>{
+{\setbeamercolor{block title}{bg=green, fg=red}
+\setbeamercolor{block body}{bg=cyan!10, fg=blue}
+\begin{block}{Hola}
+En la tercera y cuarta con otros colores.
+\end{block}}
+}
+
+\begin{itemize}
+ \item<5-> Desde la quinta
+ \item<6> Sexta
+\end{itemize}
+
+
+
+\end{frame}
+
+
+\section{Fin}
+\begin{frame}
+\begin{center}
+ \Huge Gracias por su atención
+\end{center}
+\end{frame}
+
+
+\end{document}
