@@ -12,12 +12,12 @@ local config = wezterm.config_builder()
 config.color_scheme = "Catppuccin Macchiato" -- or Mocha, Frappe, Latte
 
 -- Change the font:
-config.font_size = 19
+config.font_size = 20
 config.font = wezterm.font("IosevkaTermNerdFontMono")
 
 ---- Change the window size and position
-config.initial_cols = 150
-config.initial_rows = 40
+config.initial_cols = 140
+config.initial_rows = 35
 config.window_padding = {
   left = "0.5cell",
 	right = "0.5cell",
