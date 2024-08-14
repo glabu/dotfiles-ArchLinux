@@ -5,10 +5,10 @@ return {
 	lazy = false, -- We do not want to lazy load VimTeX since it already uses autoload mechanisms
 	init = function()
 		-- PDF Viewer (Skim):
-		vim.g.vimtex_view_method = "skim"
+		vim.g.vimtex_view_method = "zathura"
 
 		-- PDF Viewer (Skim) for viewing a citation .pdf file
-		vim.g.vimtex_context_pdf_viewer = "skim"
+		vim.g.vimtex_context_pdf_viewer = "zathura"
 
 		-- Do not auto open quickfix on compile erros
 		vim.g.vimtex_quickfix_mode = 0

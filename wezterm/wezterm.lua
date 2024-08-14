@@ -17,7 +17,7 @@ config.font = wezterm.font("IosevkaTermNerdFontMono")
 
 ---- Change the window size and position
 config.initial_cols = 150
-config.initial_rows = 35
+config.initial_rows = 40
 config.window_padding = {
   left = "0.5cell",
 	right = "0.5cell",
