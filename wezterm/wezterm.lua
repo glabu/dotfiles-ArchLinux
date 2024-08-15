@@ -16,13 +16,13 @@ config.font_size = 20
 config.font = wezterm.font("IosevkaTermNerdFontMono")
 
 ---- Change the window size and position
-config.initial_cols = 140
-config.initial_rows = 35
+config.initial_cols = 145
+config.initial_rows = 37
 config.window_padding = {
   left = "0.5cell",
 	right = "0.5cell",
-	top = "0.5cell",
-	bottom = "0.5cell",
+  top = "0.3cell",
+  bottom = "0.3cell",
 }
 
 -- Eliminate the window bar

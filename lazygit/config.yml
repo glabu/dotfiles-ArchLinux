@@ -1,8 +1,8 @@
 gui: 
-  # use the catppuccin 'macchiato' theme with 'pink' flavour
+  # use the catppuccin 'macchiato' theme with 'lavender' flavour
   theme:
     activeBorderColor:
-      - '#f5bde6'
+      - '#b7bdf8'
       - bold
     inactiveBorderColor:
       - '#a5adcb'
@@ -13,7 +13,7 @@ gui:
     cherryPickedCommitBgColor:
       - '#494d64'
     cherryPickedCommitFgColor:
-      - '#f5bde6'
+      - '#b7bdf8'
     unstagedChangesColor:
       - '#ed8796'
     defaultFgColor:
